@@ -1,12 +1,6 @@
 ﻿using Datos;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vista
@@ -42,7 +36,14 @@ namespace Vista
             if (valido)
             {
                 Menu formulario = new Menu();
+                //String[] myStringArray = { "Administrador", "Usuario" };
+                //System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(CodigoUsuarioTextBox.Text);
+                //System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, myStringArray);
+                //System.Threading.Thread.CurrentPrincipal = principal;
+                VariableGlobal.UsuarioLogin = CodigoUsuarioTextBox.Text;
+
                 Hide();
+
                 formulario.Show();
             }
             else
